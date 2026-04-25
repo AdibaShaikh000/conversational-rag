@@ -1,6 +1,10 @@
-pypdf2 
-langchain 
-faiss-cpu 
-openai 
-tiktoken 
-langchain-openai
+pypdf
+langchain>=0.2.0
+langchain-openai>=0.1.0
+langchain-community>=0.2.0
+faiss-cpu
+openai>=1.0.0
+tiktoken
+sentence-transformers>=2.7.0
+streamlit>=1.35.0
+python-dotenv>=1.0.0

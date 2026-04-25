@@ -1,0 +1,19 @@
+services:
+  rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: rag-qa:latest
+    container_name: rag-qa
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      # Persist uploaded PDFs across restarts (optional)
+      - rag_resources:/app/resources
+    restart: unless-stopped
+
+volumes:
+  rag_resources:
